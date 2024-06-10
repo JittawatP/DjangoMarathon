@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>bank.com - {% block title %} เว็บแบงค์ {% endblock title %}</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.3/examples/pricing/pricing.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="{% url 'home' %}" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+        <span class="fs-4">Bank.com</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'about' %}">เกี่ยวกับเรา</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'services' %}">บริการทั้งหมด</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'products' %}">สินค้าท้ั้งหมด</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="{% url 'contact' %}">ติดต่อเรา</a>
+      </nav>
+    </div>
+
+
+  </header>
+
+  <main>
+     {% block content %}
+        <h2>This is a block content.</h2>
+     {% endblock content %}
+  </main>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="data:image/jpeg;base64,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" alt="" width="40%" >
+        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2024</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>สินค้ายอดนิยม</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">แฟชั่นญี่ปุ่น</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">เสื้อผ้าวินเทจ</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">แฟชั่นเกาหลี</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">เสื้อผ้าสไตล์อังกฤษ</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">มาใหม่</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">อื่นๆ</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-6 col-md">
+        <h5>โปรพิเศษ</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">สินค้าซื้อ 1 แถม 1</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">สินค้าลดราคา 50%</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">โล๊ะสต๊อก</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">ลดสำหรับสมาชิก</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>ช่องทางการติดต่อ</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Facebook</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Instagram</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#"><a href="https://lin.ee/dV1e12i"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" border="0"></a></a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">xtwitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+</html>
