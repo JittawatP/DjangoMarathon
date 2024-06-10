@@ -5,6 +5,13 @@
 {% block content %}
 
 <h1>ติดต่อเรา</h1>
+{% if alert == 'success' %}
+<div class="alert alert-success d-flex align-items-center" role="alert">
+    
+        สำเร็จ! ได้รัข้อมูลเรียบร้อยแล้ว
+
+</div>
+{% endif %}
 <div class="container">
     <form method="POST" action="">
         
@@ -29,7 +36,7 @@
         <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" >
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" click>Submit</button>
     </form>
 </div>
 <div class="container">
