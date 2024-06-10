@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Staff,Product
+from .models import Staff,Product,ContactUs
+
 
 def Homepage(request):
     product = Product.objects.all()
@@ -17,13 +18,25 @@ def Products(request):
     return render(request,'myapp/products.html')
 
 def Contact(request):
+    namelist = Staff.objects.all()
+    context = {'namelist':namelist}
 
     if request.method =='POST':
         data = request.POST.copy()
         print('DATA:', data)
+        name = data.get('name')
+        title = data.get('title')
+        detail = data.get('detail')
+        email = data.get('email')
+        newcontact = ContactUs()
+        newcontact.name = name
+        newcontact.title = title
+        newcontact.detail = detail
+        newcontact.email = email
+        newcontact.save()
+        context['alert'] = 'success'
 
-    namelist = Staff.objects.all()
-    context = {'namelist':namelist}
+    
     return render(request,'myapp/contact.html',context)
 
 
